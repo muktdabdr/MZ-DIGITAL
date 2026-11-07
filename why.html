@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b0b14">
+<meta name="description" content="Why - لعبة أندرويد من تطوير M.Z DIGITAL">
+<title>Why | M.Z DIGITAL</title>
+
+<style>
+:root {
+  --bg:#0b0b14;
+  --panel:#131320;
+  --purple:#8a2be2;
+  --light:#b794f6;
+  --silver:#e5e7eb;
+  --muted:#a4a4b5;
+  --border:rgba(183,148,246,.2);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--bg);
+  color:var(--silver);
+  font-family:Arial,"Segoe UI",sans-serif;
+  line-height:1.8;
+}
+a{text-decoration:none;color:inherit}
+.container{width:min(1080px,90%);margin:auto}
+header{
+  position:sticky;top:0;z-index:10;
+  background:rgba(11,11,20,.94);
+  backdrop-filter:blur(15px);
+  border-bottom:1px solid var(--border);
+}
+.nav{
+  min-height:75px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+.brand{font-weight:900;letter-spacing:2px}
+.brand span{color:var(--light)}
+.nav-links{display:flex;gap:20px;align-items:center}
+.nav-links a{color:var(--muted);font-size:13px}
+.lang{
+  background:var(--panel);
+  color:white;
+  border:1px solid var(--border);
+  padding:8px 14px;
+  border-radius:9px;
+  cursor:pointer;
+}
+.hero{
+  text-align:center;
+  padding:90px 0 75px;
+  background:radial-gradient(ellipse at 50% 20%,#7020c533,transparent 65%);
+}
+.badge{
+  display:inline-block;
+  border:1px solid var(--border);
+  border-radius:30px;
+  padding:5px 15px;
+  color:var(--light);
+  font-size:12px;
+}
+.hero h1{
+  font-size:clamp(55px,10vw,95px);
+  margin:15px 0;
+  line-height:1.2;
+}
+.gradient{
+  background:linear-gradient(90deg,#fff,#c7a7ff,#8a2be2);
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+}
+.hero p{
+  max-width:650px;
+  margin:0 auto;
+  color:var(--muted);
+}
+.actions{
+  display:flex;
+  justify-content:center;
+  gap:13px;
+  flex-wrap:wrap;
+  margin-top:28px;
+}
+.btn{
+  display:inline-block;
+  padding:12px 25px;
+  border-radius:10px;
+  font-weight:bold;
+  transition:.2s;
+}
+.btn:hover{transform:translateY(-3px)}
+.primary{
+  color:white;
+  background:linear-gradient(100deg,#7020c5,#a34bfa);
+  box-shadow:0 8px 30px #8a2be233;
+}
+.secondary{
+  border:1px solid var(--border);
+  color:white;
+}
+.preview{
+  max-width:750px;
+  min-height:250px;
+  margin:50px auto 0;
+  border:1px solid var(--border);
+  border-radius:22px;
+  background:linear-gradient(145deg,#1b1530,#10101b);
+  display:grid;
+  place-items:center;
+  position:relative;
+  overflow:hidden;
+}
+.preview:before,.preview:after{
+  content:"";
+  position:absolute;
+  border:1px solid #b794f633;
+  border-radius:50%;
+  width:260px;
+  height:260px;
+}
+.preview:after{width:370px;height:370px}
+.logo{
+  position:relative;
+  z-index:1;
+  width:110px;
+  height:110px;
+  border-radius:28px;
+  display:grid;
+  place-items:center;
+  font-size:48px;
+  font-weight:900;
+  color:white;
+  background:linear-gradient(145deg,#8a2be2,#24103e);
+  box-shadow:0 0 55px #8a2be266;
+}
+.preview small{
+  position:absolute;
+  bottom:15px;
+  color:#c8b8e8;
+  letter-spacing:3px;
+}
+section{padding:70px 0}
+.heading{text-align:center;margin-bottom:35px}
+.heading h2{font-size:32px;margin-bottom:8px}
+.heading p{color:var(--muted)}
+.grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+}
+.card{
+  background:var(--panel);
+  border:1px solid var(--border);
+  border-radius:17px;
+  padding:25px;
+  transition:.2s;
+}
+.card:hover{
+  transform:translateY(-5px);
+  border-color:var(--light);
+}
+.icon{font-size:27px;margin-bottom:12px}
+.card h3{margin-bottom:8px}
+.card p{color:var(--muted);font-size:14px}
+.steps{
+  max-width:750px;
+  margin:auto;
+  display:grid;
+  gap:14px;
+}
+.step{
+  display:flex;
+  align-items:center;
+  gap:15px;
+  padding:17px;
+  background:var(--panel);
+  border:1px solid var(--border);
+  border-radius:13px;
+}
+.number{
+  min-width:35px;
+  height:35px;
+  border-radius:10px;
+  display:grid;
+  place-items:center;
+  background:#8a2be233;
+  color:var(--light);
+  font-weight:bold;
+}
+.step p{color:var(--muted);font-size:14px}
+.download-box{
+  text-align:center;
+  padding:45px 20px;
+  background:linear-gradient(130deg,#1b1530,#11111c);
+  border:1px solid var(--border);
+  border-radius:22px;
+}
+.download-box p{
+  color:var(--muted);
+  max-width:600px;
+  margin:12px auto 23px;
+}
+.note{font-size:12px;color:var(--muted);margin-top:15px}
+footer{
+  border-top:1px solid var(--border);
+  padding:25px 0;
+  text-align:center;
+  color:var(--muted);
+  font-size:12px;
+}
+[dir="ltr"] body{text-align:left}
+[dir="ltr"] .step{flex-direction:row}
+@media(max-width:700px){
+  .grid{grid-template-columns:1fr}
+  .hero{padding:65px 0}
+  .nav{flex-wrap:wrap;padding:12px 0}
+  .nav-links{gap:12px}
+  section{padding:55px 0}
+  .preview{min-height:200px}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="container nav">
+    <a class="brand" href="index.html">M.Z <span>DIGITAL</span></a>
+    <div class="nav-links">
+      <a href="index.html" data-en="Company" data-ar="الشركة">الشركة</a>
+      <button class="lang" id="langBtn">English</button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<section class="hero">
+  <div class="container">
+
+    <span class="badge"
+      data-en="ANDROID GAME · BETA 1.0.0"
+      data-ar="لعبة أندرويد · الإصدار التجريبي 1.0.0">
+      لعبة أندرويد · الإصدار التجريبي 1.0.0
+    </span>
+
+    <h1><span class="gradient">Why</span></h1>
+
+    <p data-en="Discover Why, an Android game published by M.Z DIGITAL. Download the beta release and experience the game on your device."
+       data-ar="اكتشف لعبة Why، إحدى ألعاب أندرويد المنشورة من M.Z DIGITAL. حمّل الإصدار التجريبي وجرّب اللعبة على جهازك.">
+       اكتشف لعبة Why، إحدى ألعاب أندرويد المنشورة من M.Z DIGITAL. حمّل الإصدار التجريبي وجرّب اللعبة على جهازك.
+    </p>
+
+    <div class="actions">
+      <a class="btn primary"
+         href="https://github.com/muktdabdr/Why/releases/download/v1.0.0-beta.1/why-debug-apk.1.zip"
+         target="_blank" rel="noopener"
+         data-en="Download Beta"
+         data-ar="تحميل النسخة التجريبية">
+         تحميل النسخة التجريبية
+      </a>
+
+      <a class="btn secondary"
+         href="https://github.com/muktdabdr/Why/releases/tag/v1.0.0-beta.1"
+         target="_blank" rel="noopener"
+         data-en="Release Details"
+         data-ar="تفاصيل الإصدار">
+         تفاصيل الإصدار
+      </a>
+    </div>
+
+    <div class="preview">
+      <div class="logo">W</div>
+      <small>M.Z DIGITAL · WHY</small>
+    </div>
+
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="heading">
+      <h2 data-en="About the Game" data-ar="عن اللعبة">عن اللعبة</h2>
+      <p data-en="A new release from our growing game portfolio."
+         data-ar="إصدار جديد ضمن مجموعة ألعابنا.">
+         إصدار جديد ضمن مجموعة ألعابنا.
+      </p>
+    </div>
+
+    <div class="grid">
+      <article class="card">
+        <div class="icon">🎮</div>
+        <h3 data-en="Android Experience" data-ar="تجربة أندرويد">تجربة أندرويد</h3>
+        <p data-en="Designed to be installed and played on compatible Android devices."
+           data-ar="مصممة للتثبيت واللعب على أجهزة أندرويد المتوافقة.">
+           مصممة للتثبيت واللعب على أجهزة أندرويد المتوافقة.
+        </p>
+      </article>
+
+      <article class="card">
+        <div class="icon">✨</div>
+        <h3 data-en="Beta Release" data-ar="إصدار تجريبي">إصدار تجريبي</h3>
+        <p data-en="Version 1.0.0 Beta is available now. Your feedback helps improve future updates."
+           data-ar="الإصدار 1.0.0 التجريبي متاح الآن. ملاحظاتكم تساعدنا على تحسين التحديثات القادمة.">
+           الإصدار 1.0.0 التجريبي متاح الآن. ملاحظاتكم تساعدنا على تحسين التحديثات القادمة.
+        </p>
+      </article>
+
+      <article class="card">
+        <div class="icon">🚀</div>
+        <h3 data-en="By M.Z DIGITAL" data-ar="من تطوير M.Z DIGITAL">من تطوير M.Z DIGITAL</h3>
+        <p data-en="Published as part of our mission to turn ideas into digital experiences."
+           data-ar="نشرناها ضمن مهمتنا لتحويل الأفكار إلى تجارب رقمية.">
+           نشرناها ضمن مهمتنا لتحويل الأفكار إلى تجارب رقمية.
+        </p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="heading">
+      <h2 data-en="How to Install" data-ar="طريقة التثبيت">طريقة التثبيت</h2>
+      <p data-en="Follow these steps after downloading the package."
+         data-ar="اتبع هذه الخطوات بعد تنزيل الحزمة.">
+         اتبع هذه الخطوات بعد تنزيل الحزمة.
+      </p>
+    </div>
+
+    <div class="steps">
+      <div class="step">
+        <span class="number">1</span>
+        <p data-en="Tap Download Beta to download the ZIP package from GitHub."
+           data-ar="اضغط تحميل النسخة التجريبية لتنزيل ملف ZIP من GitHub.">
+           اضغط تحميل النسخة التجريبية لتنزيل ملف ZIP من GitHub.
+        </p>
+      </div>
+
+      <div class="step">
+        <span class="number">2</span>
+        <p data-en="Extract the ZIP file using your phone's file manager."
+           data-ar="استخرج محتويات ملف ZIP باستخدام مدير الملفات في هاتفك.">
+           استخرج محتويات ملف ZIP باستخدام مدير الملفات في هاتفك.
+        </p>
+      </div>
+
+      <div class="step">
+        <span class="number">3</span>
+        <p data-en="Open the extracted APK file and follow Android's installation prompts. You may need to allow installation from this source."
+           data-ar="افتح ملف APK المستخرج واتبع تعليمات التثبيت في أندرويد. قد تحتاج إلى السماح بالتثبيت من هذا المصدر.">
+           افتح ملف APK المستخرج واتبع تعليمات التثبيت في أندرويد. قد تحتاج إلى السماح بالتثبيت من هذا المصدر.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="download-box">
+      <span class="badge">VERSION 1.0.0 BETA</span>
+
+      <h2 data-en="Ready to Try Why?"
+          data-ar="هل أنت مستعد لتجربة Why؟">
+          هل أنت مستعد لتجربة Why؟
+      </h2>
+
+      <p data-en="Download the ZIP package from the official GitHub release. The package contains the APK installation file."
+         data-ar="نزّل حزمة ZIP من إصدار GitHub الرسمي. تحتوي الحزمة على ملف APK الخاص بالتثبيت.">
+         نزّل حزمة ZIP من إصدار GitHub الرسمي. تحتوي الحزمة على ملف APK الخاص بالتثبيت.
+      </p>
+
+      <a class="btn primary"
+         href="https://github.com/muktdabdr/Why/releases/download/v1.0.0-beta.1/why-debug-apk.1.zip"
+         target="_blank" rel="noopener"
+         data-en="Download Why"
+         data-ar="تحميل Why">
+         تحميل Why
+      </a>
+
+      <div class="note"
+           data-en="Beta software. Android may display a warning when installing apps from outside the Play Store."
+           data-ar="هذا إصدار تجريبي. قد يعرض أندرويد تحذيراً عند تثبيت تطبيق من خارج متجر Play.">
+           هذا إصدار تجريبي. قد يعرض أندرويد تحذيراً عند تثبيت تطبيق من خارج متجر Play.
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  © 2026 M.Z DIGITAL · Turning Ideas Into Digital Experiences.
+</footer>
+
+<script>
+const langBtn = document.getElementById("langBtn");
+let currentLang = "ar";
+
+function setLanguage(lang) {
+  currentLang = lang;
+  document.documentElement.lang = lang;
+  document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
+
+  document.querySelectorAll("[data-en][data-ar]").forEach(el => {
+    el.textContent = el.getAttribute("data-" + lang);
+  });
+
+  langBtn.textContent = lang === "ar" ? "English" : "العربية";
+}
+
+langBtn.addEventListener("click", () => {
+  setLanguage(currentLang === "ar" ? "en" : "ar");
+});
+</script>
+
+</body>
+</html>
