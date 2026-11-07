@@ -1,0 +1,38 @@
+name: M.Z DIGITAL - Repository Check
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  repository-check:
+    name: Check Repository
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Check Repository Files
+        run: |
+          echo "================================"
+          echo "M.Z DIGITAL"
+          echo "Repository check started"
+          echo "================================"
+
+          if [ -f README.md ]; then
+            echo "README.md found"
+          else
+            echo "README.md is missing"
+            exit 1
+          fi
+
+          echo "Repository check completed successfully."
