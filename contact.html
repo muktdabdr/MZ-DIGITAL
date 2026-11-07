@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0B0B14">
+  <meta name="description" content="Contact M.Z DIGITAL for digital projects, apps, games and creative services.">
+  <title>Contact | M.Z DIGITAL</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      font-family: Arial, sans-serif;
+      color: #E5E7EB;
+      background:
+        radial-gradient(circle at top, #24113e 0%, #0B0B14 48%);
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      padding: 24px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #ffffff12;
+    }
+
+    .brand {
+      color: #B794F6;
+      font-size: 21px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    .lang {
+      background: #211632;
+      color: #E5E7EB;
+      border: 1px solid #8A2BE2;
+      border-radius: 8px;
+      padding: 9px 15px;
+      cursor: pointer;
+    }
+
+    main {
+      width: min(600px, 90%);
+      margin: auto;
+      padding: 65px 0;
+      text-align: center;
+    }
+
+    .tag {
+      color: #B794F6;
+      letter-spacing: 3px;
+      font-size: 12px;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-size: clamp(32px, 7vw, 46px);
+      margin-bottom: 15px;
+    }
+
+    .description {
+      color: #aaa7b8;
+      line-height: 1.9;
+      margin-bottom: 35px;
+    }
+
+    .contact-card {
+      background: #151321;
+      border: 1px solid #ffffff16;
+      border-radius: 16px;
+      padding: 25px;
+      margin: 16px 0;
+      text-align: right;
+      transition: 0.3s;
+    }
+
+    .contact-card:hover {
+      border-color: #8A2BE2;
+      transform: translateY(-3px);
+    }
+
+    .contact-card h2 {
+      font-size: 19px;
+      margin-bottom: 10px;
+      color: #B794F6;
+    }
+
+    .contact-card p {
+      color: #aaa7b8;
+      font-size: 14px;
+      line-height: 1.8;
+      margin-bottom: 18px;
+    }
+
+    .btn {
+      display: inline-block;
+      text-decoration: none;
+      padding: 12px 22px;
+      border-radius: 9px;
+      font-weight: bold;
+      font-size: 14px;
+      transition: 0.3s;
+      cursor: pointer;
+    }
+
+    .primary {
+      background: linear-gradient(135deg, #8A2BE2, #6D28D9);
+      color: white;
+    }
+
+    .secondary {
+      border: 1px solid #8A2BE2;
+      color: #D8BFFF;
+      background: transparent;
+    }
+
+    .btn:hover {
+      opacity: 0.85;
+      transform: translateY(-2px);
+    }
+
+    .back {
+      display: inline-block;
+      margin-top: 25px;
+      color: #B794F6;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 22px;
+      color: #777386;
+      font-size: 12px;
+      border-top: 1px solid #ffffff12;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="brand">M.Z DIGITAL</div>
+    <button class="lang" onclick="toggleLanguage()">English</button>
+  </header>
+
+  <main>
+    <div class="tag">M.Z DIGITAL · CONTACT</div>
+
+    <h1 data-ar="تواصل معنا" data-en="Get In Touch">
+      تواصل معنا
+    </h1>
+
+    <p class="description"
+       data-ar="هل لديك فكرة أو مشروع؟ يسعدنا التواصل معك ومناقشة أفكارك وتحويلها إلى تجربة رقمية."
+       data-en="Have an idea or project? Contact us to discuss your vision and turn it into a digital experience.">
+      هل لديك فكرة أو مشروع؟ يسعدنا التواصل معك ومناقشة أفكارك وتحويلها إلى تجربة رقمية.
+    </p>
+
+    <div class="contact-card">
+      <h2 data-ar="البريد الإلكتروني" data-en="Email">
+        البريد الإلكتروني
+      </h2>
+
+      <p>muqtdabdr@gmail.com</p>
+
+      <a class="btn primary"
+         href="mailto:muqtdabdr@gmail.com"
+         data-ar="إرسال رسالة"
+         data-en="Send Email">
+        إرسال رسالة
+      </a>
+    </div>
+
+    <div class="contact-card">
+      <h2 data-ar="واتساب" data-en="WhatsApp">
+        واتساب
+      </h2>
+
+      <p
+        data-ar="تواصل معنا مباشرة عبر واتساب باستخدام اسم المستخدم الخاص بنا."
+        data-en="Contact us directly through WhatsApp using our username.">
+        تواصل معنا مباشرة عبر واتساب باستخدام اسم المستخدم الخاص بنا.
+      </p>
+
+      <a class="btn secondary"
+         href="https://wa.me/mb9_"
+         target="_blank"
+         rel="noopener">
+        WhatsApp · @mb9_
+      </a>
+    </div>
+
+    <a href="index.html" class="back"
+       data-ar="← العودة إلى الصفحة الرئيسية"
+       data-en="← Back to Home">
+      ← العودة إلى الصفحة الرئيسية
+    </a>
+  </main>
+
+  <footer>
+    © 2026 M.Z DIGITAL · All Rights Reserved
+  </footer>
+
+  <script>
+    let currentLanguage = "ar";
+
+    function toggleLanguage() {
+      currentLanguage = currentLanguage === "ar" ? "en" : "ar";
+
+      document.documentElement.lang = currentLanguage;
+      document.documentElement.dir =
+        currentLanguage === "ar" ? "rtl" : "ltr";
+
+      document.querySelectorAll("[data-ar]").forEach(element => {
+        element.textContent = element.getAttribute(
+          "data-" + currentLanguage
+        );
+      });
+
+      document.querySelector(".lang").textContent =
+        currentLanguage === "ar" ? "English" : "العربية";
+    }
+  </script>
+
+</body>
+</html>
