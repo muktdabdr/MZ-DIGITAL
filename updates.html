@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b0b14">
+<title>Why Updates | M.Z DIGITAL</title>
+
+<style>
+:root{
+  --bg:#0b0b14;
+  --panel:#131320;
+  --purple:#8a2be2;
+  --light:#b794f6;
+  --silver:#e5e7eb;
+  --muted:#a4a4b5;
+  --border:rgba(183,148,246,.2);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  background:var(--bg);
+  color:var(--silver);
+  font-family:Arial,"Segoe UI",sans-serif;
+  line-height:1.8;
+}
+a{text-decoration:none;color:inherit}
+.container{width:min(950px,90%);margin:auto}
+header{
+  border-bottom:1px solid var(--border);
+  background:#0b0b14;
+}
+.nav{
+  min-height:75px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+.brand{font-weight:900;letter-spacing:2px}
+.brand span{color:var(--light)}
+button{
+  cursor:pointer;
+  color:white;
+  background:var(--panel);
+  border:1px solid var(--border);
+  padding:9px 15px;
+  border-radius:9px;
+}
+.hero{
+  text-align:center;
+  padding:75px 0 45px;
+  background:radial-gradient(ellipse at top,#7020c533,transparent 65%);
+}
+.tag{
+  display:inline-block;
+  padding:5px 14px;
+  border:1px solid var(--border);
+  border-radius:30px;
+  color:var(--light);
+  font-size:12px;
+}
+h1{font-size:clamp(38px,7vw,65px);margin:15px 0}
+.gradient{
+  background:linear-gradient(90deg,#fff,#c7a7ff,#8a2be2);
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+}
+.hero p{color:var(--muted)}
+main{padding:35px 0 80px}
+.release{
+  background:var(--panel);
+  border:1px solid var(--border);
+  border-radius:18px;
+  padding:27px;
+  margin-bottom:20px;
+}
+.release-top{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:12px;
+}
+.version{font-size:25px;font-weight:bold}
+.status{
+  color:#b794f6;
+  border:1px solid var(--border);
+  padding:4px 12px;
+  border-radius:30px;
+  font-size:12px;
+}
+.date{color:var(--muted);font-size:13px;margin:8px 0 20px}
+.release h3{font-size:16px;margin-bottom:10px}
+.release ul{padding-inline-start:22px;color:var(--muted);font-size:14px}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:23px}
+.btn{
+  display:inline-block;
+  padding:10px 19px;
+  border-radius:9px;
+  font-weight:bold;
+  font-size:13px;
+}
+.primary{
+  background:linear-gradient(100deg,#7020c5,#a34bfa);
+  color:white;
+}
+.secondary{
+  border:1px solid var(--border);
+}
+.notice{
+  margin-top:25px;
+  padding:20px;
+  border:1px solid var(--border);
+  border-radius:14px;
+  color:var(--muted);
+  font-size:13px;
+}
+footer{
+  border-top:1px solid var(--border);
+  padding:23px 0;
+  text-align:center;
+  color:var(--muted);
+  font-size:12px;
+}
+@media(max-width:600px){
+  .hero{padding:55px 0 35px}
+  .release{padding:20px}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="container nav">
+    <a class="brand" href="index.html">M.Z <span>DIGITAL</span></a>
+    <button id="langBtn">English</button>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <span class="tag"
+      data-en="GAME DEVELOPMENT"
+      data-ar="تطوير الألعاب">تطوير الألعاب</span>
+
+    <h1><span class="gradient">Why</span> Updates</h1>
+
+    <p
+      data-en="Official release history and updates for Why."
+      data-ar="سجل الإصدارات والتحديثات الرسمي للعبة Why.">
+      سجل الإصدارات والتحديثات الرسمي للعبة Why.
+    </p>
+  </div>
+</section>
+
+<main>
+<div class="container">
+
+  <article class="release">
+    <div class="release-top">
+      <div class="version">Why 1.0.0</div>
+      <span class="status"
+        data-en="BETA RELEASE"
+        data-ar="إصدار تجريبي">إصدار تجريبي</span>
+    </div>
+
+    <div class="date"
+      data-en="Published: November 2026"
+      data-ar="تاريخ النشر: نوفمبر 2026">
+      تاريخ النشر: نوفمبر 2026
+    </div>
+
+    <h3
+      data-en="Release information"
+      data-ar="معلومات الإصدار">معلومات الإصدار</h3>
+
+    <ul>
+      <li data-en="First published beta release."
+          data-ar="أول إصدار تجريبي منشور للعبة.">
+          أول إصدار تجريبي منشور للعبة.
+      </li>
+      <li data-en="Android installation package available."
+          data-ar="توفير حزمة تثبيت أندرويد.">
+          توفير حزمة تثبيت أندرويد.
+      </li>
+      <li data-en="Feedback and testing phase."
+          data-ar="مرحلة التجربة واستقبال الملاحظات.">
+          مرحلة التجربة واستقبال الملاحظات.
+      </li>
+    </ul>
+
+    <div class="actions">
+      <a class="btn primary"
+         href="https://github.com/muktdabdr/Why/releases/download/v1.0.0-beta.1/why-debug-apk.1.zip"
+         target="_blank" rel="noopener"
+         data-en="Download Version"
+         data-ar="تحميل الإصدار">
+         تحميل الإصدار
+      </a>
+
+      <a class="btn secondary"
+         href="https://github.com/muktdabdr/Why/releases/tag/v1.0.0-beta.1"
+         target="_blank" rel="noopener"
+         data-en="Release Details"
+         data-ar="تفاصيل الإصدار">
+         تفاصيل الإصدار
+      </a>
+    </div>
+  </article>
+
+  <div class="notice"
+    data-en="More updates will be published here when new versions are officially released."
+    data-ar="ستُنشر التحديثات الجديدة هنا عند إصدار نسخ رسمية جديدة.">
+    ستُنشر التحديثات الجديدة هنا عند إصدار نسخ رسمية جديدة.
+  </div>
+
+</div>
+</main>
+
+<footer>
+  © 2026 M.Z DIGITAL · Why Updates
+</footer>
+
+<script>
+const langBtn=document.getElementById("langBtn");
+let lang="ar";
+
+langBtn.addEventListener("click",()=>{
+  lang=lang==="ar"?"en":"ar";
+  document.documentElement.lang=lang;
+  document.documentElement.dir=lang==="ar"?"rtl":"ltr";
+
+  document.querySelectorAll("[data-en][data-ar]").forEach(el=>{
+    el.textContent=el.getAttribute("data-"+lang);
+  });
+
+  langBtn.textContent=lang==="ar"?"English":"العربية";
+});
+</script>
+
+</body>
+</html>
