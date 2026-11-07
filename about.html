@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b0b14">
+<meta name="description" content="About M.Z DIGITAL — Turning Ideas Into Digital Experiences.">
+<title>About Us | M.Z DIGITAL</title>
+
+<style>
+:root {
+  --bg: #0b0b14;
+  --card: #141421;
+  --purple: #8a2be2;
+  --lavender: #b794f6;
+  --silver: #e5e7eb;
+  --muted: #a1a1b5;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: var(--bg);
+  color: var(--silver);
+  line-height: 1.9;
+}
+
+.container {
+  width: min(900px, 90%);
+  margin: auto;
+}
+
+header {
+  padding: 25px 0;
+  border-bottom: 1px solid #262638;
+}
+
+.logo {
+  color: var(--lavender);
+  font-size: 23px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.hero {
+  text-align: center;
+  padding: 85px 15px 65px;
+}
+
+.tag {
+  color: var(--lavender);
+  letter-spacing: 3px;
+  font-size: 12px;
+}
+
+h1 {
+  font-size: clamp(34px, 7vw, 55px);
+  margin: 15px 0;
+}
+
+h1 span {
+  color: var(--lavender);
+}
+
+.hero p {
+  color: var(--muted);
+  max-width: 650px;
+  margin: auto;
+}
+
+section {
+  margin-bottom: 25px;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid #29283b;
+  border-radius: 16px;
+  padding: 28px;
+}
+
+h2 {
+  color: var(--lavender);
+  margin-bottom: 12px;
+  font-size: 23px;
+}
+
+.card p {
+  color: #c5c5d2;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.value {
+  background: var(--card);
+  border: 1px solid #29283b;
+  border-radius: 14px;
+  padding: 22px;
+}
+
+.value h3 {
+  color: var(--lavender);
+  margin-bottom: 8px;
+}
+
+.value p {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.cta {
+  text-align: center;
+  padding: 35px 20px;
+  border: 1px solid #453064;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #171126, #11111d);
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 18px;
+  padding: 11px 25px;
+  border-radius: 9px;
+  background: var(--purple);
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.btn.secondary {
+  background: transparent;
+  border: 1px solid var(--lavender);
+  color: var(--lavender);
+  margin-right: 8px;
+}
+
+footer {
+  text-align: center;
+  padding: 30px 10px;
+  color: #77778b;
+  font-size: 13px;
+  border-top: 1px solid #262638;
+  margin-top: 60px;
+}
+
+@media(max-width: 500px) {
+  .hero { padding-top: 60px; }
+  .card { padding: 21px; }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="container logo">M.Z DIGITAL</div>
+</header>
+
+<main class="container">
+
+  <div class="hero">
+    <div class="tag">ABOUT OUR BRAND</div>
+    <h1>من نحن في <span>M.Z DIGITAL</span></h1>
+    <p>
+      نحوّل الأفكار إلى تجارب رقمية.
+      نؤمن بأن كل فكرة مميزة تستحق فرصة للتحول إلى مشروع رقمي حقيقي.
+    </p>
+  </div>
+
+  <section class="card">
+    <h2>رؤيتنا | Our Vision</h2>
+    <p>
+      أن نصبح علامة رقمية إبداعية تقدم حلولاً تقنية وتصميمية
+      تجمع بين الابتكار والبساطة والجودة، وتساهم في بناء
+      تجارب رقمية ذات قيمة وتأثير.
+    </p>
+  </section>
+
+  <section class="card">
+    <h2>رسالتنا | Our Mission</h2>
+    <p>
+      تواصلوا معنا نحن نقوم ب تحويل احتياجات العملاء وأفكارهم إلى تطبيقات وألعاب
+      وهويات بصرية وتجارب رقمية منظمة، مع الاهتمام
+     بالتفاصيل وسهولة الاستخدام والتطوير المستمر.
+    </p>
+  </section>
+
+  <section>
+    <h2>ماذا نقدم؟ | What We Do</h2>
+    <div class="grid">
+      <div class="value">
+        <h3>تطوير التطبيقات</h3>
+        <p>تصميم وبناء تطبيقات رقمية تخدم احتياجات المستخدمين.</p>
+      </div>
+
+      <div class="value">
+        <h3>تطوير الألعاب</h3>
+        <p>ابتكار تجارب تفاعلية وألعاب للهواتف والمنصات الرقمية.</p>
+      </div>
+
+      <div class="value">
+        <h3>التصميم الجرافيكي</h3>
+        <p>تصميم الشعارات والهويات البصرية والمحتوى الإبداعي.</p>
+      </div>
+
+      <div class="value">
+        <h3>الحلول الرقمية</h3>
+        <p>تحويل الأفكار والمشاريع إلى حلول رقمية قابلة للتطوير.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>مبادئنا | Our Values</h2>
+    <p>
+      الإبداع، الجودة، البساطة، التطوير المستمر،
+      والاهتمام بتقديم تجربة واضحة واحترافية.
+    </p>
+  </section>
+
+  <section class="cta">
+    <h2>لديك فكرة؟ لنحوّلها إلى واقع.</h2>
+    <p>ابدأ رحلتك الرقمية مع M.Z DIGITAL.</p>
+
+    <a href="contact.html" class="btn">تواصل معنا</a>
+    <a href="index.html" class="btn secondary">الصفحة الرئيسية</a>
+  </section>
+
+</main>
+
+<footer>
+  M.Z DIGITAL · Turning Ideas Into Digital Experiences.
+</footer>
+
+</body>
+</html>
