@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b0b14">
+<meta name="description" content="M.Z DIGITAL — App and Game Development Studio. Turning Ideas Into Digital Experiences.">
+<title>M.Z DIGITAL | Digital Future</title>
+
+<style>
+:root {
+  --bg:#0b0b14;
+  --panel:#131320;
+  --purple:#8a2be2;
+  --light:#b794f6;
+  --silver:#e5e7eb;
+  --muted:#a4a4b5;
+  --border:rgba(183,148,246,.2);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--bg);
+  color:var(--silver);
+  font-family:Arial,"Segoe UI",sans-serif;
+  line-height:1.7;
+}
+a{text-decoration:none;color:inherit}
+button{font:inherit;cursor:pointer}
+.container{width:min(1120px,90%);margin:auto}
+header{
+  position:sticky;top:0;z-index:20;
+  background:rgba(11,11,20,.92);
+  backdrop-filter:blur(15px);
+  border-bottom:1px solid var(--border);
+}
+.nav{
+  min-height:75px;display:flex;
+  align-items:center;justify-content:space-between;
+  gap:20px;
+}
+.brand{display:flex;align-items:center;gap:10px}
+.brand-mark{
+  width:42px;height:42px;border-radius:12px;
+  display:grid;place-items:center;
+  background:linear-gradient(135deg,var(--purple),#32105d);
+  color:white;font-size:19px;font-weight:900;
+  box-shadow:0 0 20px #8a2be255;
+}
+.brand-name{font-weight:900;letter-spacing:2px}
+nav{display:flex;align-items:center;gap:25px}
+nav a{font-size:13px;color:var(--muted)}
+nav a:hover{color:var(--light)}
+.lang{
+  border:1px solid var(--border);
+  background:var(--panel);color:white;
+  padding:8px 14px;border-radius:9px;
+}
+.hero{
+  min-height:650px;display:flex;align-items:center;
+  text-align:center;position:relative;overflow:hidden;
+  background:
+  radial-gradient(ellipse at 50% 35%,#53109b35,transparent 60%);
+}
+.hero-content{max-width:850px;margin:auto;padding:90px 0}
+.hero-logo{
+  width:95px;height:95px;margin:0 auto 25px;
+  border:1px solid #b794f655;border-radius:25px;
+  display:grid;place-items:center;
+  font-size:42px;font-weight:900;
+  color:white;
+  background:linear-gradient(145deg,#8a2be255,#141020);
+  box-shadow:0 0 55px #8a2be244;
+}
+.eyebrow{
+  color:var(--light);font-size:12px;
+  letter-spacing:4px;text-transform:uppercase;
+}
+h1{
+  font-size:clamp(38px,7vw,76px);
+  line-height:1.15;margin:18px 0;
+  font-weight:900;letter-spacing:2px;
+}
+.gradient{
+  background:linear-gradient(90deg,#fff,#b794f6,#8a2be2);
+  -webkit-background-clip:text;background-clip:text;
+  color:transparent;
+}
+.hero p{color:var(--muted);max-width:650px;margin:0 auto 30px}
+.actions{display:flex;justify-content:center;gap:13px;flex-wrap:wrap}
+.btn{
+  display:inline-block;padding:12px 24px;
+  border-radius:10px;font-weight:bold;
+  transition:.2s;
+}
+.btn-primary{
+  color:white;background:linear-gradient(100deg,#7020c5,#a34bfa);
+  box-shadow:0 8px 30px #8a2be233;
+}
+.btn-secondary{border:1px solid var(--border);color:white}
+.btn:hover{transform:translateY(-3px)}
+section{padding:90px 0}
+.section-head{text-align:center;margin-bottom:45px}
+.section-head h2{font-size:clamp(27px,4vw,40px);margin-bottom:10px}
+.section-head p{color:var(--muted)}
+.services{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:18px;
+}
+.card{
+  padding:27px 22px;background:var(--panel);
+  border:1px solid var(--border);
+  border-radius:17px;transition:.25s;
+}
+.card:hover{
+  transform:translateY(-6px);
+  border-color:var(--light);
+  box-shadow:0 10px 35px #8a2be21c;
+}
+.icon{
+  width:48px;height:48px;border-radius:13px;
+  display:grid;place-items:center;
+  background:#8a2be222;color:var(--light);
+  font-size:23px;margin-bottom:18px;
+}
+.card h3{font-size:17px;margin-bottom:9px}
+.card p{font-size:13px;color:var(--muted)}
+.about-box{
+  padding:40px;background:linear-gradient(130deg,#191329,#11111c);
+  border:1px solid var(--border);border-radius:22px;
+  text-align:center;
+}
+.about-box p{max-width:750px;margin:15px auto;color:var(--muted)}
+.values{
+  display:grid;grid-template-columns:repeat(4,1fr);
+  gap:14px;margin-top:25px;
+}
+.value{
+  padding:17px 10px;border:1px solid var(--border);
+  border-radius:12px;font-size:14px;
+}
+.projects{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:18px;
+}
+.project{
+  background:var(--panel);border:1px solid var(--border);
+  border-radius:17px;padding:25px;
+}
+.project .tag{
+  display:inline-block;color:var(--light);
+  font-size:11px;border:1px solid var(--border);
+  padding:4px 10px;border-radius:20px;margin-bottom:15px;
+}
+.project h3{margin-bottom:8px}
+.project p{font-size:13px;color:var(--muted)}
+.project-status{margin-top:18px;color:var(--light);font-size:12px}
+.contact{
+  text-align:center;
+  background:radial-gradient(ellipse at center,#53109b25,transparent 70%);
+}
+.contact p{color:var(--muted);margin:12px auto 25px}
+footer{
+  border-top:1px solid var(--border);
+  padding:25px 0;color:var(--muted);font-size:12px;
+}
+.footer-inner{
+  display:flex;justify-content:space-between;
+  align-items:center;gap:15px;flex-wrap:wrap;
+}
+.footer-links{display:flex;gap:18px}
+.footer-links a:hover{color:var(--light)}
+[dir="rtl"] body{text-align:right}
+[dir="rtl"] .brand-name{letter-spacing:1px}
+[dir="rtl"] .eyebrow{letter-spacing:1px}
+@media(max-width:800px){
+  nav{gap:12px}
+  nav a{font-size:11px}
+  .services{grid-template-columns:repeat(2,1fr)}
+  .projects{grid-template-columns:1fr 1fr}
+  .values{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:520px){
+  .nav{flex-wrap:wrap;padding:13px 0}
+  nav{order:3;width:100%;justify-content:space-between}
+  .services,.projects{grid-template-columns:1fr}
+  .hero{min-height:570px}
+  section{padding:65px 0}
+  .about-box{padding:25px 17px}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="container nav">
+  <a href="#home" class="brand">
+    <div class="brand-mark">MZ</div>
+    <span class="brand-name">M.Z DIGITAL</span>
+  </a>
+
+  <nav>
+    <a href="#home" data-en="Home" data-ar="الرئيسية">Home</a>
+    <a href="#services" data-en="Services" data-ar="خدماتنا">Services</a>
+    <a href="#about" data-en="About" data-ar="من نحن">About</a>
+    <a href="#projects" data-en="Projects" data-ar="مشاريعنا">Projects</a>
+    <a href="#contact" data-en="Contact" data-ar="اتصل بنا">Contact</a>
+  </nav>
+
+  <button class="lang" id="languageButton">العربية</button>
+</div>
+</header>
+
+<main>
+<section class="hero" id="home">
+<div class="container hero-content">
+  <div class="hero-logo">MZ</div>
+  <div class="eyebrow" data-en="APP & GAME DEVELOPMENT STUDIO"
+       data-ar="استوديو تطوير التطبيقات والألعاب">
+    APP & GAME DEVELOPMENT STUDIO
+  </div>
+
+  <h1>M.Z <span class="gradient">DIGITAL</span></h1>
+
+  <p data-en="We transform ideas into modern applications, creative games and useful digital experiences."
+     data-ar="نحوّل الأفكار إلى تطبيقات حديثة وألعاب إبداعية وتجارب رقمية مفيدة.">
+    We transform ideas into modern applications, creative games and useful digital experiences.
+  </p>
+
+  <div class="actions">
+    <a href="#projects" class="btn btn-primary"
+       data-en="Explore Projects" data-ar="استكشف مشاريعنا">
+       Explore Projects
+    </a>
+    <a href="#about" class="btn btn-secondary"
+       data-en="Discover Us" data-ar="اكتشف شركتنا">
+       Discover Us
+    </a>
+  </div>
+</div>
+</section>
+
+<section id="services">
+<div class="container">
+  <div class="section-head">
+    <h2 data-en="What We Do" data-ar="ماذا نقدم؟">What We Do</h2>
+    <p data-en="Building digital products with purpose."
+       data-ar="نبني منتجات رقمية لها هدف وقيمة.">
+       Building digital products with purpose.
+    </p>
+  </div>
+
+  <div class="services">
+    <article class="card">
+      <div class="icon">⌘</div>
+      <h3 data-en="App Development" data-ar="تطوير التطبيقات">App Development</h3>
+      <p data-en="Modern mobile applications designed around real user needs."
+         data-ar="تطبيقات هاتف حديثة مصممة لتلبية احتياجات المستخدمين.">
+         Modern mobile applications designed around real user needs.
+      </p>
+    </article>
+
+    <article class="card">
+      <div class="icon">🎮</div>
+      <h3 data-en="Game Development" data-ar="تطوير الألعاب">Game Development</h3>
+      <p data-en="Creative mobile games and interactive experiences."
+         data-ar="ألعاب هاتف إبداعية وتجارب تفاعلية ممتعة.">
+         Creative mobile games and interactive experiences.
+      </p>
+    </article>
+
+    <article class="card">
+      <div class="icon">AI</div>
+      <h3 data-en="AI-Powered Products" data-ar="منتجات الذكاء الاصطناعي">AI-Powered Products</h3>
+      <p data-en="Smart digital tools using AI where it adds real value."
+         data-ar="أدوات رقمية ذكية تستخدم الذكاء الاصطناعي عند الحاجة.">
+         Smart digital tools using AI where it adds real value.
+      </p>
+    </article>
+
+    <article class="card">
+      <div class="icon">✦</div>
+      <h3 data-en="UI/UX Design" data-ar="تصميم واجهات المستخدم">UI/UX Design</h3>
+      <p data-en="Clean interfaces and intuitive user experiences."
+         data-ar="واجهات واضحة وتجارب استخدام سهلة ومريحة.">
+         Clean interfaces and intuitive user experiences.
+      </p>
+    </article>
+  </div>
+</div>
+</section>
+
+<section id="about">
+<div class="container">
+  <div class="about-box">
+    <div class="eyebrow" data-en="WHO WE ARE" data-ar="من نحن">WHO WE ARE</div>
+    <h2 data-en="More Than an Idea..." data-ar="أكثر من مجرد فكرة...">More Than an Idea...</h2>
+    <h2 class="gradient" data-en="A Digital Future." data-ar="مستقبل رقمي.">A Digital Future.</h2>
+
+    <p data-en="M.Z DIGITAL is an independent development studio focused on mobile applications, games and digital solutions. We believe technology should be useful, accessible and thoughtfully designed."
+       data-ar="M.Z DIGITAL استوديو تطوير مستقل يهتم بتطبيقات الهواتف والألعاب والحلول الرقمية. نؤمن بأن التكنولوجيا يجب أن تكون مفيدة ومتاحة ومصممة بعناية.">
+       M.Z DIGITAL is an independent development studio focused on mobile applications, games and digital solutions.
+    </p>
+
+    <div class="values">
+      <div class="value">✧ <span data-en="Innovation" data-ar="الابتكار">Innovation</span></div>
+      <div class="value">◈ <span data-en="Reliability" data-ar="الموثوقية">Reliability</span></div>
+      <div class="value">⚡ <span data-en="Performance" data-ar="الأداء">Performance</span></div>
+      <div class="value">◎ <span data-en="User Focus" data-ar="المستخدم أولاً">User Focus</span></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section id="projects">
+<div class="container">
+  <div class="section-head">
+    <h2 data-en="Our Projects" data-ar="مشاريعنا">Our Projects</h2>
+    <p data-en="Our digital journey starts here."
+       data-ar="هنا تبدأ رحلتنا الرقمية.">
+       Our digital journey starts here.
+    </p>
+  </div>
+
+  <div class="projects">
+    <article class="project">
+      <span class="tag">MOBILE APPS</span>
+      <h3 data-en="Mobile Applications" data-ar="تطبيقات الهاتف">Mobile Applications</h3>
+      <p data-en="Useful tools and applications for everyday life."
+         data-ar="أدوات وتطبيقات مفيدة للحياة اليومية.">
+         Useful tools and applications for everyday life.
+      </p>
+      <div class="project-status" data-en="Coming Soon" data-ar="قريباً">Coming Soon</div>
+    </article>
+
+    <article class="project">
+      <span class="tag">GAMES</span>
+      <h3 data-en="Mobile Games" data-ar="ألعاب الهاتف">Mobile Games</h3>
+      <p data-en="Interactive entertainment and creative challenges."
+         data-ar="ترفيه تفاعلي وتحديات إبداعية.">
+         Interactive entertainment and creative challenges.
+      </p>
+      <div class="project-status" data-en="Coming Soon" data-ar="قريباً">Coming Soon</div>
+    </article>
+
+    <article class="project">
+      <span class="tag">AI & DIGITAL</span>
+      <h3 data-en="Digital Solutions" data-ar="الحلول الرقمية">Digital Solutions</h3>
+      <p data-en="Smart solutions designed to make tasks easier."
+         data-ar="حلول ذكية تهدف إلى تسهيل المهام.">
+         Smart solutions designed to make tasks easier.
+      </p>
+      <div class="project-status" data-en="Coming Soon" data-ar="قريباً">Coming Soon</div>
+    </article>
+  </div>
+</div>
+</section>
+
+<section class="contact" id="contact">
+<div class="container">
+  <div class="eyebrow" data-en="LET'S CONNECT" data-ar="لنتواصل">LET'S CONNECT</div>
+  <h2 data-en="Have an Idea?" data-ar="لديك فكرة؟">Have an Idea?</h2>
+  <p data-en="Follow our development journey and explore our open-source projects."
+     data-ar="تابع رحلتنا في التطوير واكتشف مشاريعنا مفتوحة المصدر.">
+     Follow our development journey and explore our open-source projects.
+  </p>
+  <a class="btn btn-primary"
+     href="https://github.com/muktdabdr"
+     target="_blank" rel="noopener">
+     GitHub ↗
+  </a>
+</div>
+</section>
+</main>
+
+<footer>
+<div class="container footer-inner">
+  <span>© <span id="year"></span> M.Z DIGITAL. All rights reserved.</span>
+  <div class="footer-links">
+    <a href="https://github.com/muktdabdr" target="_blank" rel="noopener">GitHub</a>
+    <a href="#home" data-en="Back to top ↑" data-ar="للأعلى ↑">Back to top ↑</a>
+  </div>
+</div>
+</footer>
+
+<script>
+const button = document.getElementById("languageButton");
+let currentLanguage = "en";
+
+function setLanguage(lang) {
+  currentLanguage = lang;
+  document.documentElement.lang = lang;
+  document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
+
+  document.querySelectorAll("[data-en][data-ar]").forEach(element => {
+    element.textContent = element.dataset[lang];
+  });
+
+  button.textContent = lang === "en" ? "العربية" : "English";
+}
+
+button.addEventListener("click", () => {
+  setLanguage(currentLanguage === "en" ? "ar" : "en");
+});
+
+document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
