@@ -28,6 +28,7 @@ body{
 a{text-decoration:none;color:inherit}
 button{font:inherit;cursor:pointer}
 .container{width:min(1120px,90%);margin:auto}
+
 header{
   position:sticky;top:0;z-index:20;
   background:rgba(11,11,20,.92);
@@ -48,14 +49,17 @@ header{
   box-shadow:0 0 20px #8a2be255;
 }
 .brand-name{font-weight:900;letter-spacing:2px}
+
 nav{display:flex;align-items:center;gap:25px}
 nav a{font-size:13px;color:var(--muted)}
 nav a:hover{color:var(--light)}
+
 .lang{
   border:1px solid var(--border);
   background:var(--panel);color:white;
   padding:8px 14px;border-radius:9px;
 }
+
 .hero{
   min-height:650px;display:flex;align-items:center;
   text-align:center;position:relative;overflow:hidden;
@@ -87,7 +91,11 @@ h1{
   color:transparent;
 }
 .hero p{color:var(--muted);max-width:650px;margin:0 auto 30px}
-.actions{display:flex;justify-content:center;gap:13px;flex-wrap:wrap}
+
+.actions{
+  display:flex;justify-content:center;
+  gap:13px;flex-wrap:wrap;
+}
 .btn{
   display:inline-block;padding:12px 24px;
   border-radius:10px;font-weight:bold;
@@ -99,10 +107,12 @@ h1{
 }
 .btn-secondary{border:1px solid var(--border);color:white}
 .btn:hover{transform:translateY(-3px)}
+
 section{padding:90px 0}
 .section-head{text-align:center;margin-bottom:45px}
 .section-head h2{font-size:clamp(27px,4vw,40px);margin-bottom:10px}
 .section-head p{color:var(--muted)}
+
 .services{
   display:grid;grid-template-columns:repeat(4,1fr);gap:18px;
 }
@@ -124,6 +134,7 @@ section{padding:90px 0}
 }
 .card h3{font-size:17px;margin-bottom:9px}
 .card p{font-size:13px;color:var(--muted)}
+
 .about-box{
   padding:40px;background:linear-gradient(130deg,#191329,#11111c);
   border:1px solid var(--border);border-radius:22px;
@@ -138,6 +149,7 @@ section{padding:90px 0}
   padding:17px 10px;border:1px solid var(--border);
   border-radius:12px;font-size:14px;
 }
+
 .projects{
   display:grid;grid-template-columns:repeat(3,1fr);gap:18px;
 }
@@ -153,11 +165,13 @@ section{padding:90px 0}
 .project h3{margin-bottom:8px}
 .project p{font-size:13px;color:var(--muted)}
 .project-status{margin-top:18px;color:var(--light);font-size:12px}
+
 .contact{
   text-align:center;
   background:radial-gradient(ellipse at center,#53109b25,transparent 70%);
 }
 .contact p{color:var(--muted);margin:12px auto 25px}
+
 footer{
   border-top:1px solid var(--border);
   padding:25px 0;color:var(--muted);font-size:12px;
@@ -168,9 +182,11 @@ footer{
 }
 .footer-links{display:flex;gap:18px}
 .footer-links a:hover{color:var(--light)}
+
 [dir="rtl"] body{text-align:right}
 [dir="rtl"] .brand-name{letter-spacing:1px}
 [dir="rtl"] .eyebrow{letter-spacing:1px}
+
 @media(max-width:800px){
   nav{gap:12px}
   nav a{font-size:11px}
@@ -193,6 +209,7 @@ footer{
 
 <header>
 <div class="container nav">
+
   <a href="#home" class="brand">
     <div class="brand-mark">MZ</div>
     <span class="brand-name">M.Z DIGITAL</span>
@@ -207,14 +224,19 @@ footer{
   </nav>
 
   <button class="lang" id="languageButton">العربية</button>
+
 </div>
 </header>
 
 <main>
+
 <section class="hero" id="home">
 <div class="container hero-content">
+
   <div class="hero-logo">MZ</div>
-  <div class="eyebrow" data-en="APP & GAME DEVELOPMENT STUDIO"
+
+  <div class="eyebrow"
+       data-en="APP & GAME DEVELOPMENT STUDIO"
        data-ar="استوديو تطوير التطبيقات والألعاب">
     APP & GAME DEVELOPMENT STUDIO
   </div>
@@ -231,16 +253,19 @@ footer{
        data-en="Explore Projects" data-ar="استكشف مشاريعنا">
        Explore Projects
     </a>
+
     <a href="#about" class="btn btn-secondary"
        data-en="Discover Us" data-ar="اكتشف شركتنا">
        Discover Us
     </a>
   </div>
+
 </div>
 </section>
 
 <section id="services">
 <div class="container">
+
   <div class="section-head">
     <h2 data-en="What We Do" data-ar="ماذا نقدم؟">What We Do</h2>
     <p data-en="Building digital products with purpose."
@@ -250,6 +275,7 @@ footer{
   </div>
 
   <div class="services">
+
     <article class="card">
       <div class="icon">⌘</div>
       <h3 data-en="App Development" data-ar="تطوير التطبيقات">App Development</h3>
@@ -285,16 +311,24 @@ footer{
          Clean interfaces and intuitive user experiences.
       </p>
     </article>
+
   </div>
 </div>
 </section>
 
 <section id="about">
 <div class="container">
+
   <div class="about-box">
     <div class="eyebrow" data-en="WHO WE ARE" data-ar="من نحن">WHO WE ARE</div>
-    <h2 data-en="More Than an Idea..." data-ar="أكثر من مجرد فكرة...">More Than an Idea...</h2>
-    <h2 class="gradient" data-en="A Digital Future." data-ar="مستقبل رقمي.">A Digital Future.</h2>
+
+    <h2 data-en="More Than an Idea..." data-ar="أكثر من مجرد فكرة...">
+      More Than an Idea...
+    </h2>
+
+    <h2 class="gradient" data-en="A Digital Future." data-ar="مستقبل رقمي.">
+      A Digital Future.
+    </h2>
 
     <p data-en="M.Z DIGITAL is an independent development studio focused on mobile applications, games and digital solutions. We believe technology should be useful, accessible and thoughtfully designed."
        data-ar="M.Z DIGITAL استوديو تطوير مستقل يهتم بتطبيقات الهواتف والألعاب والحلول الرقمية. نؤمن بأن التكنولوجيا يجب أن تكون مفيدة ومتاحة ومصممة بعناية.">
@@ -307,12 +341,14 @@ footer{
       <div class="value">⚡ <span data-en="Performance" data-ar="الأداء">Performance</span></div>
       <div class="value">◎ <span data-en="User Focus" data-ar="المستخدم أولاً">User Focus</span></div>
     </div>
+
   </div>
 </div>
 </section>
 
 <section id="projects">
 <div class="container">
+
   <div class="section-head">
     <h2 data-en="Our Projects" data-ar="مشاريعنا">Our Projects</h2>
     <p data-en="Our digital journey starts here."
@@ -322,6 +358,7 @@ footer{
   </div>
 
   <div class="projects">
+
     <article class="project">
       <span class="tag">MOBILE APPS</span>
       <h3 data-en="Mobile Applications" data-ar="تطبيقات الهاتف">Mobile Applications</h3>
@@ -333,28 +370,36 @@ footer{
     </article>
 
     <article class="project">
-  <span class="tag">ANDROID GAME · BETA</span>
-  <h3>Why</h3>
-  <p data-en="Our first published mobile game. Download and enjoy the game."
-     data-ar="أول لعبة منشورة لدينا. حمّل اللعبة واستمتع بها.">
-     Our first published mobile game. Download and enjoy the game.
-  </p>
-  <a class="btn btn-primary"
-     href="https://github.com/muktdabdr/Why/releases/download/v1.0.0-beta.1/why-debug-apk.1.zip"
-     target="_blank" rel="noopener"
-     data-en="Download Game" data-ar="تحميل اللعبة">
-     Download Game
-  <a class="btn btn-secondary"
-   href="why.html"
-   data-en="Game Details"
-   data-ar="تفاصيل اللعبة">
-   Game Details
-  </a>
-  <div class="project-status"
-       data-en="Version 1.0.0 Beta"
-       data-ar="الإصدار 1.0.0 تجريبي">
-       Version 1.0.0 Beta
-  </div>
+      <span class="tag">ANDROID GAME · BETA</span>
+
+      <h3>Why</h3>
+
+      <p data-en="Our first published mobile game. Download and enjoy the game."
+         data-ar="أول لعبة منشورة لدينا. حمّل اللعبة واستمتع بها.">
+         Our first published mobile game. Download and enjoy the game.
+      </p>
+
+      <a class="btn btn-primary"
+         href="https://github.com/muktdabdr/Why/releases/download/v1.0.0-beta.1/why-debug-apk.1.zip"
+         target="_blank"
+         rel="noopener"
+         data-en="Download Game"
+         data-ar="تحميل اللعبة">
+         Download Game
+      </a>
+
+      <a class="btn btn-secondary"
+         href="why.html"
+         data-en="Game Details"
+         data-ar="تفاصيل اللعبة">
+         Game Details
+      </a>
+
+      <div class="project-status"
+           data-en="Version 1.0.0 Beta"
+           data-ar="الإصدار 1.0.0 تجريبي">
+           Version 1.0.0 Beta
+      </div>
     </article>
 
     <article class="project">
@@ -366,34 +411,71 @@ footer{
       </p>
       <div class="project-status" data-en="Coming Soon" data-ar="قريباً">Coming Soon</div>
     </article>
+
   </div>
 </div>
 </section>
 
 <section class="contact" id="contact">
 <div class="container">
-  <div class="eyebrow" data-en="LET'S CONNECT" data-ar="لنتواصل">LET'S CONNECT</div>
-  <h2 data-en="Have an Idea?" data-ar="لديك فكرة؟">Have an Idea?</h2>
-  <p data-en="Follow our development journey and explore our open-source projects."
-     data-ar="تابع رحلتنا في التطوير واكتشف مشاريعنا مفتوحة المصدر.">
-     Follow our development journey and explore our open-source projects.
+
+  <div class="eyebrow"
+       data-en="LET'S CONNECT"
+       data-ar="لنتواصل">
+       LET'S CONNECT
+  </div>
+
+  <h2 data-en="Have an Idea?" data-ar="لديك فكرة؟">
+    Have an Idea?
+  </h2>
+
+  <p data-en="Have a project or idea? Contact us directly through our official contact page."
+     data-ar="لديك مشروع أو فكرة؟ تواصل معنا مباشرة عبر صفحة التواصل الرسمية.">
+     Have a project or idea? Contact us directly through our official contact page.
   </p>
-  <a class="btn btn-primary"
-     href="https://github.com/muktdabdr"
-     target="_blank" rel="noopener">
-     GitHub ↗
-  </a>
+
+  <div class="actions">
+
+    <a class="btn btn-primary"
+       href="contact.html"
+       data-en="Contact Us"
+       data-ar="تواصل معنا">
+       Contact Us
+    </a>
+
+    <a class="btn btn-secondary"
+       href="https://github.com/muktdabdr"
+       target="_blank"
+       rel="noopener">
+       GitHub ↗
+    </a>
+
+  </div>
+
 </div>
 </section>
+
 </main>
 
 <footer>
 <div class="container footer-inner">
+
   <span>© <span id="year"></span> M.Z DIGITAL. All rights reserved.</span>
+
   <div class="footer-links">
-    <a href="https://github.com/muktdabdr" target="_blank" rel="noopener">GitHub</a>
-    <a href="#home" data-en="Back to top ↑" data-ar="للأعلى ↑">Back to top ↑</a>
+    <a href="https://github.com/muktdabdr"
+       target="_blank"
+       rel="noopener">
+       GitHub
+    </a>
+
+    <a href="#home"
+       data-en="Back to top ↑"
+       data-ar="للأعلى ↑">
+       Back to top ↑
+    </a>
   </div>
+
 </div>
 </footer>
 
@@ -403,6 +485,7 @@ let currentLanguage = "en";
 
 function setLanguage(lang) {
   currentLanguage = lang;
+
   document.documentElement.lang = lang;
   document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
 
