@@ -1,38 +1,37 @@
-name: M.Z DIGITAL - Repository Check
+name: Build Mahfazati APK
 
 on:
   push:
-    branches:
-      - main
-  pull_request:
-    branches:
-      - main
+    branches: [main]
   workflow_dispatch:
 
-permissions:
-  contents: read
-
 jobs:
-  repository-check:
-    name: Check Repository
+  build:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Check Repository Files
+      - name: Unzip project
         run: |
-          echo "================================"
-          echo "M.Z DIGITAL"
-          echo "Repository check started"
-          echo "================================"
+          mkdir -p build_src
+          unzip -q -o Mahfazati.zip -d build_src
 
-          if [ -f README.md ]; then
-            echo "README.md found"
-          else
-            echo "README.md is missing"
-            exit 1
-          fi
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 17
 
-          echo "Repository check completed successfully."
+      - uses: android-actions/setup-android@v3
+
+      - uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: 8.9
+
+      - name: Build debug APK
+        working-directory: build_src
+        run: gradle assembleDebug --no-daemon
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Mahfazati-APK
+          path: build_src/app/build/outputs/apk/debug/app-debug.apk
